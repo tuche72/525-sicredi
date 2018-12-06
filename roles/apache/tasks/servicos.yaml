@@ -1,0 +1,10 @@
+
+- name: configurando os servicos
+  service:
+   name: "{{item.nome}}"
+   state: "{{item.estado}}"
+  when: ansible_os_family == item.distro
+  with_items:
+   - {nome: apache2, estado: started, distro: Debian}
+   - {nome: httpd, estado: started, distro: RedHat}
+   - {nome: firewalld, estado: started, distro: RedHat}

@@ -1,0 +1,7 @@
+
+- name: garantir apache instalado
+  host:
+  package:
+   name: "{{item}}"
+  with_items:
+   - apache2

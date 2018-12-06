@@ -1,0 +1,11 @@
+---
+# tasks file for apache
+
+- name: garantindo os pacotes
+  include: packages.yaml
+
+- name: garantindo os servicos
+  include: servicos.yaml
+
+- name: garantindo o site
+  include: site.yaml
